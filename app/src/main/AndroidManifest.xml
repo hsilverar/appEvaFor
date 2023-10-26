@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.evaluacionformativa">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EvaluacionFormativa">
+        <activity
+            android:name=".seguimientoI"
+            android:exported="true" />
+        <activity
+            android:name=".sesionI"
+            android:exported="true" />
+        <activity
+            android:name=".proyectoI"
+            android:exported="true" />
+        <activity
+            android:name=".planEstudio"
+            android:exported="true" />
+        <activity
+            android:name=".ebr"
+            android:exported="true" />
+        <activity
+            android:name=".ciclo"
+            android:exported="true" />
+        <activity
+            android:name=".aula"
+            android:exported="true" />
+        <activity
+            android:name=".estudiante"
+            android:exported="true" />
+        <activity
+            android:name=".profesor"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

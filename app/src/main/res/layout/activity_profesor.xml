@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profesor">
+
+    <TextView
+        android:id="@+id/tvTituloP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/miProfesor"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFechaRP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tvFechaR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/svContenidoP"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/buRegistrarC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloP">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvContenidoP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvContenidoP" />
+
+            <EditText
+                android:id="@+id/etDNIP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/etDNI"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvContenidoP"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/etApellidosP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:ems="10"
+                android:hint="@string/etApellidos"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="30"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/etNombresP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:ems="10"
+                android:hint="@string/etNombres"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="30"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <RadioGroup
+                android:id="@+id/rgSexoP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/rbMasculinoP"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rbMasculinoP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rbMasculino" />
+
+                <RadioButton
+                    android:id="@+id/rbFemeninoP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rbFemenino" />
+
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/spEcivilP"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/etFechaNP"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/etFecha"
+                        android:importantForAutofill="no"
+                        android:inputType="date"
+                        android:maxLength="10"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+                    <ImageButton
+                        android:id="@+id/ibCalendarioP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/ibCalendario"
+                        android:onClick="fechaN"
+                        app:srcCompat="@android:drawable/ic_menu_today"
+                        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <GridView
+        android:id="@+id/gvTablaP"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/svContenidoP" />
+
+    <Button
+        android:id="@+id/buRegistrarC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#0000FF"
+        android:contentDescription="@string/buRegistrar"
+        android:onClick="registrar"
+        android:text="@string/buRegistrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaRP" />
+
+    <Button
+        android:id="@+id/buBuscarC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#00FF00"
+        android:contentDescription="@string/buBuscar"
+        android:onClick="buscar"
+        android:text="@string/buBuscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buRegistrarC"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buModificarC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#FFFF00"
+        android:contentDescription="@string/buModificar"
+        android:onClick="modificar"
+        android:text="@string/buModificar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buBuscarC"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buEliminarP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#FF0000"
+        android:contentDescription="@string/buEliminar"
+        android:onClick="eliminar"
+        android:text="@string/buEliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buModificarC"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/ibSalirP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/ibSalir"
+        android:onClick="anterior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buEliminarP"
+        app:srcCompat="@android:drawable/btn_dialog" />
+</androidx.constraintlayout.widget.ConstraintLayout>

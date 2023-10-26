@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/miProfesor"
+        android:title="@string/miProfesor" />
+    <item
+        android:id="@+id/miCarga"
+        android:title="@string/tvTituloC" />
+    <item
+        android:id="@+id/miEstudiante"
+        android:title="@string/miEstudiante" />
+    <item
+        android:id="@+id/miSesion"
+        android:title="@string/miMatricula" />
+    <item
+        android:id="@+id/miEBR"
+        android:title="@string/miEBR" />
+    <item
+        android:id="@+id/miCiclo"
+        android:title="@string/miCiclo" />
+    <item
+        android:id="@+id/miPLan"
+        android:title="@string/miPlanE" />
+</menu>

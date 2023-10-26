@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".planEstudio">
+
+    <TextView
+        android:id="@+id/tvTituloPe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/miPlanE"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDNIPe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFechaRPe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tvFechaR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/svContenidoPe"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/buRegistrarPe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloPe">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvContenidoPe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvContenidoPe" />
+
+            <Spinner
+                android:id="@+id/spEBRPe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/etCodigoPe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:ems="10"
+                android:hint="@string/tvCodigo"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvContenidoPe"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/etDenominacionPe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:ems="10"
+                android:hint="@string/tvDenominacion"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="30"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck,SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <GridView
+        android:id="@+id/gvTablaPe"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/svContenidoPe" />
+
+    <Button
+        android:id="@+id/buRegistrarPe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#0000FF"
+        android:contentDescription="@string/buRegistrar"
+        android:text="@string/buRegistrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaRPe" />
+
+    <Button
+        android:id="@+id/buBuscarPe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#00FF00"
+        android:contentDescription="@string/buBuscar"
+        android:text="@string/buBuscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buRegistrarPe"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buModificarPe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#FFFF00"
+        android:contentDescription="@string/buModificar"
+        android:text="@string/buModificar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buBuscarPe"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buEliminarPe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#FF0000"
+        android:contentDescription="@string/buEliminar"
+        android:text="@string/buEliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buModificarPe"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/ibSalirPe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/ibSalir"
+        android:onClick="anterior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buEliminarPe"
+        app:srcCompat="@android:drawable/btn_dialog" />
+</androidx.constraintlayout.widget.ConstraintLayout>

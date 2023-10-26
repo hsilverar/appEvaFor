@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".proyectoI">
+
+    <TextView
+        android:id="@+id/tvTituloAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/miProyetoA"
+        android:textColor="#FF0000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvFechaRAc"
+        app:layout_constraintStart_toEndOf="@+id/tvCodigoSAc"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTituloSAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvDNIM"
+        app:layout_constraintStart_toEndOf="@+id/tvTituloAc"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDNIAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCodigoAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tvDNIAc"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFechaRAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tvFechaR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEBRAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvDNIM"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloAc" />
+
+    <TextView
+        android:id="@+id/tvAnioAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvAnio"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tvEBRAc"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloAc" />
+
+    <TextView
+        android:id="@+id/tvCicloAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/miCiclo"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEBRAc" />
+
+    <TextView
+        android:id="@+id/tvAulaAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvTituloC"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tvCicloAc"
+        app:layout_constraintTop_toBottomOf="@+id/tvEBRAc" />
+
+    <TextView
+        android:id="@+id/tvFechaAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvFechaR"
+        app:layout_constraintStart_toEndOf="@+id/tvAulaAc"
+        app:layout_constraintTop_toBottomOf="@+id/tvAnioAc" />
+
+    <TextView
+        android:id="@+id/tvDNIEAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvDNIM"
+        android:textColor="#00FF00"
+        app:layout_constraintStart_toEndOf="@+id/tvCodigoAc"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCodigoSAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvDNIM"
+        android:textColor="#00FF00"
+        app:layout_constraintStart_toEndOf="@+id/tvDNIEAc"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridView
+        android:id="@+id/gvTablaAc"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCicloAc" />
+
+    <Button
+        android:id="@+id/buInicioAc"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FF0000"
+        android:onClick="inicio"
+        android:text="@string/buInicio"
+        app:layout_constraintStart_toEndOf="@+id/tvFechaAc"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloAc"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buProcesoAc"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FFFF00"
+        android:onClick="proceso"
+        android:text="@string/buProceso"
+        app:layout_constraintStart_toEndOf="@+id/buInicioAc"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloAc"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buEsperadoAc"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#00FF00"
+        android:onClick="esperado"
+        android:text="@string/buEsperado"
+        app:layout_constraintStart_toEndOf="@+id/buProcesoAc"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloAc" />
+
+    <Button
+        android:id="@+id/buDestacadoAc"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#0000FF"
+        android:onClick="destacado"
+        android:text="@string/buDestacado"
+        app:layout_constraintStart_toEndOf="@+id/buEsperadoAc"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloAc" />
+
+    <ImageButton
+        android:id="@+id/ibSalirAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/ibSalir"
+        android:onClick="anterior"
+        app:layout_constraintStart_toEndOf="@+id/buDestacadoAc"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloAc"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

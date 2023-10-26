@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".estudiante">
+
+    <TextView
+        android:id="@+id/tvTituloE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/miEstudiante"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDNIPE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFechaRE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tvFechaR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/svContenidoE"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/buRegistrarE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloE">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvContenidoE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvContenidoE" />
+
+            <EditText
+                android:id="@+id/etDNIE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:ems="10"
+                android:hint="@string/etDNI"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvContenidoE"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/etApellidosE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:ems="10"
+                android:hint="@string/etApellidos"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="30"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/etNombresE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:ems="10"
+                android:hint="@string/etNombres"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="30"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <RadioGroup
+                android:id="@+id/rgSexoE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/rbMasculinoE"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rbMasculinoE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rbMasculino" />
+
+                <RadioButton
+                    android:id="@+id/rbFemeninoE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rbFemenino" />
+
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/spEcivilE"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/etFechaNE"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/etFecha"
+                        android:importantForAutofill="no"
+                        android:inputType="date"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+                    <ImageButton
+                        android:id="@+id/ibCalendarioE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/ibCalendario"
+                        android:onClick="fechaN"
+                        app:srcCompat="@android:drawable/ic_menu_today"
+                        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+                </TableRow>
+
+            </TableLayout>
+
+            <EditText
+                android:id="@+id/etCelularE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/tvCelular"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="10" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <GridView
+        android:id="@+id/gvTablaE"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/svContenidoE" />
+
+    <Button
+        android:id="@+id/buRegistrarE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#0000FF"
+        android:contentDescription="@string/buRegistrar"
+        android:onClick="registrar"
+        android:text="@string/buRegistrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaRE" />
+
+    <Button
+        android:id="@+id/buBuscarE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#00FF00"
+        android:contentDescription="@string/buBuscar"
+        android:onClick="buscar"
+        android:text="@string/buBuscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buRegistrarE"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buModificarE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#FFFF00"
+        android:contentDescription="@string/buModificar"
+        android:onClick="modificar"
+        android:text="@string/buModificar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buBuscarE"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buEliminarE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#FF0000"
+        android:contentDescription="@string/buEliminar"
+        android:onClick="eliminar"
+        android:text="@string/buEliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buModificarE"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/ibSalirE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/ibSalir"
+        android:onClick="anterior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buEliminarE"
+        app:srcCompat="@android:drawable/btn_dialog" />
+</androidx.constraintlayout.widget.ConstraintLayout>

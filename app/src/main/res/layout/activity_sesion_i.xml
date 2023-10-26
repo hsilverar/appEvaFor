@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sesionI">
+
+    <TextView
+        android:id="@+id/tvTituloSi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tvEtiquetaMM"
+        android:textColor="#FF0000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDNISi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCodigoSi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tvTituloSi"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFechaRSi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tvFechaR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEBRSi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvDNIM"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloSi" />
+
+    <TextView
+        android:id="@+id/tvAnioSi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvAnio"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tvEBRSi"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloSi" />
+
+    <TextView
+        android:id="@+id/tvCicloSi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/miCiclo"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEBRSi" />
+
+    <TextView
+        android:id="@+id/tvAulaSi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvTituloC"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tvCicloSi"
+        app:layout_constraintTop_toBottomOf="@+id/tvEBRSi" />
+
+    <ScrollView
+        android:id="@+id/svCompetenciaSi"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCicloSi">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvPersonalSSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvPS" />
+
+                    <RadioGroup
+                        android:id="@+id/rgPersonalSSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toEndOf="@+id/tvPersonalSSi">
+
+                        <RadioButton
+                            android:id="@+id/rbIdentidadSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbIdentidad" />
+
+                        <RadioButton
+                            android:id="@+id/rbConviveSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbConvive" />
+
+                        <RadioButton
+                            android:id="@+id/rbDiosSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbDios" />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvMotricidadSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvPs" />
+
+                    <RadioGroup
+                        android:id="@+id/rgPsicomotrizSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvMotricidadSi">
+
+                        <RadioButton
+                            android:id="@+id/rbMotricidadSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbMotricidad" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvComunicacionSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvCo" />
+
+                    <RadioGroup
+                        android:id="@+id/rgComunicacionSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toEndOf="@+id/tvComunicacionSi">
+
+                        <RadioButton
+                            android:id="@+id/rbComunicaSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbComunica" />
+
+                        <RadioButton
+                            android:id="@+id/rbLeeSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbLee" />
+
+                        <RadioButton
+                            android:id="@+id/rbEscribeSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbEscribe" />
+
+                        <RadioButton
+                            android:id="@+id/rbCreaSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbCrea" />
+
+                        <RadioButton
+                            android:id="@+id/rbCastellanoSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/rbCastellano" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvMatematicaSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvMa" />
+
+                    <RadioGroup
+                        android:id="@+id/rgMatematicaSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toEndOf="@+id/tvMatematicaSi">
+
+                        <RadioButton
+                            android:id="@+id/rbCantidadSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbCantidad" />
+
+                        <RadioButton
+                            android:id="@+id/rbEspacioSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbEspacio" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvCTSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvCT" />
+
+                    <RadioGroup
+                        android:id="@+id/rgCienciaTSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/tvCTSi">
+
+                        <RadioButton
+                            android:id="@+id/rbExploraSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbExplora" />
+                    </RadioGroup>
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/etDenominacionSi"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEGHIJKLMNOPQRSTUVWXYZ0123456789"
+        android:ems="10"
+        android:hint="@string/tvDenominacion"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:maxLength="30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/svCompetenciaSi"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/ibFechaSi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/ibCalendario"
+        android:onClick="fecha"
+        app:layout_constraintStart_toEndOf="@+id/etDenominacionSi"
+        app:layout_constraintTop_toBottomOf="@+id/svCompetenciaSi"
+        app:srcCompat="@android:drawable/ic_menu_today"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvFechaSSi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvFechaR"
+        app:layout_constraintStart_toEndOf="@+id/ibFechaSi"
+        app:layout_constraintTop_toBottomOf="@+id/svCompetenciaSi" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/ibSalirSi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDenominacionSi">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <GridView
+                android:id="@+id/gvTablaFiSi"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                tools:ignore="DuplicateSpeakableTextCheck">
+
+            </GridView>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/ibArribaSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="@string/ibArribaMa"
+                        android:onClick="registrarSesion"
+                        app:srcCompat="@android:drawable/arrow_up_float"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/tvSelectorSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/tvDNIM"
+                        android:textColor="#00FF00" />
+
+                    <TextView
+                        android:id="@+id/tvEstudianteSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp" />
+
+                    <ImageButton
+                        android:id="@+id/ibAbajoSi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="@string/ibAbajoMa"
+                        android:onClick="eliminar"
+                        app:srcCompat="@android:drawable/arrow_down_float"
+                        tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
+                </TableRow>
+
+            </TableLayout>
+
+            <GridView
+                android:id="@+id/gvTablaInSi"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/ibSalirSi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/ibSalir"
+        android:onClick="anterior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

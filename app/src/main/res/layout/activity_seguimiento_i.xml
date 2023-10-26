@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".seguimientoI">
+
+    <TextView
+        android:id="@+id/tvTituloSeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/buSeguimiento"
+        android:textColor="#FF0000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvFechaRSeI"
+        app:layout_constraintStart_toEndOf="@+id/tvFechaSeI"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDNISeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCodigoSeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tvDNISeI"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFechaRSeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tvFechaR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEBRSeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvDNIM"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDNISeI" />
+
+    <TextView
+        android:id="@+id/tvAnioSeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvAnio"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tvEBRSeI"
+        app:layout_constraintTop_toBottomOf="@+id/tvDNISeI" />
+
+    <TextView
+        android:id="@+id/tvCicloSeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/miCiclo"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEBRSeI" />
+
+    <TextView
+        android:id="@+id/tvAulaSeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvTituloC"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tvCicloSeI"
+        app:layout_constraintTop_toBottomOf="@+id/tvEBRSeI" />
+
+    <TextView
+        android:id="@+id/tvDNIESeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvDNIM"
+        android:textColor="#00FF00"
+        app:layout_constraintStart_toEndOf="@+id/tvCodigoSeI"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCodigoSSeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvDNIM"
+        android:textColor="#00FF00"
+        app:layout_constraintStart_toEndOf="@+id/tvDNIESeI"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFechaSeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvDNIM"
+        android:textColor="#00FF00"
+        app:layout_constraintStart_toEndOf="@+id/tvCodigoSSeI"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etEstrategiaSeI"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:ems="10"
+        android:hint="@string/buEstrategia"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/tvAnioSeI"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloSeI"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buEstrategiaSeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#0000FF"
+        android:onClick="estrategia"
+        android:text="@string/buEstrategia"
+        app:layout_constraintStart_toEndOf="@+id/etEstrategiaSeI"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloSeI"
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/buBuscarSeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#00FF00"
+        android:onClick="buscar"
+        android:text="@string/buBuscar"
+        app:layout_constraintStart_toEndOf="@+id/buEstrategiaSeI"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloSeI" />
+
+    <GridView
+        android:id="@+id/gvTablaSeI"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buEstrategiaSeI" />
+
+    <ImageButton
+        android:id="@+id/ibSalirSeI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/ibSalir"
+        android:onClick="anterior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
